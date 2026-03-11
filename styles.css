@@ -68,6 +68,7 @@ body{
 .logo-home{
   width:min(460px, 86vw);
   margin:-100px auto -92px;
+  animation-name:logo-breathe-home;
 }
 
 .logo-small{
@@ -238,6 +239,20 @@ body{
       drop-shadow(0 0 4px rgba(255, 200, 104, 0.16))
       drop-shadow(0 0 15px rgba(255, 154, 61, 0.09))
       drop-shadow(0 0 30px rgba(255, 110, 38, 0.06));
+  }
+}
+
+@keyframes logo-breathe-home{
+  0%, 30%, 100%{
+    filter:none;
+  }
+
+  50%{
+    filter:
+      drop-shadow(0 0 1px rgba(255, 239, 210, 0.34))
+      drop-shadow(0 0 6px rgba(255, 201, 108, 0.22))
+      drop-shadow(0 0 18px rgba(255, 155, 66, 0.12))
+      drop-shadow(0 0 34px rgba(255, 114, 44, 0.08));
   }
 }
 
