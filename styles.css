@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  min-height:100%;
+}
+
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:"Cormorant Garamond", Georgia, serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.page{
+  width:min(920px, calc(100vw - 40px));
+  margin:0 auto;
+  padding:20px 0 38px;
+  text-align:center;
+}
+
+.page-home{
+  padding-top:0;
+}
+
+.page-fuku{
+  width:min(760px, calc(100vw - clamp(72px, 14vw, 220px)));
+  padding-top:28px;
+}
+
+.logo-link{
+  display:inline-block;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.page-fuku .logo-link{
+  display:block;
+  width:fit-content;
+  margin:0 auto;
+  line-height:0;
+}
+
+.logo{
+  display:block;
+  height:auto;
+  cursor:pointer;
+}
+
+.logo-glow{
+  will-change:filter;
+  animation:logo-breathe 16.8s cubic-bezier(0.42, 0, 0.28, 1) infinite;
+  filter:none;
+  transition:filter 220ms ease;
+}
+
+.logo-link:hover .logo-glow,
+.logo-link:focus-visible .logo-glow{
+  animation-name:logo-breathe-hover;
+  animation-duration:5.6s;
+}
+
+.logo-home{
+  width:min(460px, 86vw);
+  margin:-100px auto -92px;
+}
+
+.logo-small{
+  width:min(190px, 42vw);
+  margin:-10px auto -12px;
+}
+
+.copy-block{
+  width:min(760px, 100%);
+  margin:8px auto 0;
+}
+
+.copy-line{
+  margin:0;
+  font-size:clamp(1.18rem, 1rem + 0.8vw, 1.55rem);
+  line-height:1.18;
+}
+
+.copy-line + .copy-line{
+  margin-top:0;
+}
+
+.fuku-text{
+  font-size:clamp(1.16rem, 1rem + 0.7vw, 1.48rem);
+  line-height:1.58;
+  text-align:left;
+}
+
+.fuku-text p{
+  margin:0 0 1.15em;
+}
+
+.fuku-text p:last-child{
+  margin-bottom:0.22em;
+}
+
+.book-credit{
+  margin:0;
+  font-size:clamp(1.1rem, 1rem + 0.55vw, 1.35rem);
+  text-align:center;
+}
+
+.book-link{
+  color:#fff;
+  text-decoration:underline;
+  text-underline-offset:0.14em;
+}
+
+.social{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+.social a{
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-decoration:none;
+  font-size:0;
+  line-height:0;
+  border-radius:999px;
+  transition:transform 0.18s ease, opacity 0.18s ease;
+}
+
+.social a:hover{
+  transform:translateY(-1px);
+  opacity:0.88;
+}
+
+.social svg{
+  width:26px;
+  height:26px;
+  display:block;
+  flex:none;
+  fill:currentColor;
+  stroke:none;
+}
+
+.contact-wrap{
+  width:min(100%, 420px);
+  margin:14px auto 0;
+}
+
+.contact-heading{
+  margin:0 0 14px;
+  font-size:clamp(1.05rem, 0.98rem + 0.35vw, 1.2rem);
+  line-height:1.1;
+  letter-spacing:0.14em;
+}
+
+.contact-form{
+  width:100%;
+}
+
+.field-label{
+  display:block;
+  margin:0 0 6px;
+  text-align:left;
+  font-size:1rem;
+  font-weight:600;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  display:block;
+  margin:0 0 14px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,0.42);
+  background:transparent;
+  color:#fff;
+  font:inherit;
+  font-size:1.05rem;
+}
+
+.contact-form textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:rgba(255,255,255,0.68);
+}
+
+.contact-form button{
+  display:inline-block;
+  padding:11px 22px;
+  border:1px solid #fff;
+  background:#000;
+  color:#fff;
+  font:inherit;
+  font-size:1.02rem;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  opacity:0.92;
+}
+
+.contact-form button[disabled]{
+  opacity:0.65;
+  cursor:default;
+}
+
+.form-status{
+  min-height:1.3em;
+  margin:10px 0 0;
+  font-size:0.98rem;
+  text-align:left;
+}
+
+@keyframes logo-breathe{
+  0%, 30%, 100%{
+    filter:none;
+  }
+
+  50%{
+    filter:
+      drop-shadow(0 0 1px rgba(255, 238, 206, 0.26))
+      drop-shadow(0 0 4px rgba(255, 200, 104, 0.16))
+      drop-shadow(0 0 15px rgba(255, 154, 61, 0.09))
+      drop-shadow(0 0 30px rgba(255, 110, 38, 0.06));
+  }
+}
+
+@keyframes logo-breathe-hover{
+  0%, 22%, 100%{
+    filter:none;
+  }
+
+  50%{
+    filter:
+      drop-shadow(0 0 1px rgba(255, 242, 216, 0.42))
+      drop-shadow(0 0 8px rgba(255, 201, 107, 0.28))
+      drop-shadow(0 0 21px rgba(255, 155, 66, 0.16))
+      drop-shadow(0 0 38px rgba(255, 114, 44, 0.1));
+  }
+}
+
+@media (max-width:640px){
+  .page{
+    width:min(920px, calc(100vw - 28px));
+    padding-top:16px;
+  }
+
+  .page-fuku{
+    width:min(760px, calc(100vw - 40px));
+    padding-top:22px;
+  }
+
+  .logo-home{
+    margin:-50px auto -62px;
+  }
+
+  .logo-small{
+    width:min(170px, 48vw);
+  }
+
+  .social{
+    gap:12px;
+  }
+}
